@@ -33,19 +33,19 @@ public class Ejercicio13 {
             int sumaTotal = 0;
             int media;
             int contador = 0;
+
             for (columna = 0; columna < 10; columna++) {
                 numero[fila][columna] = (int)(Math.random()*(210 - 140) + 140);
                 System.out.print(numero[fila][columna] + " ");
                 if (numero[fila][columna] > maximo){
-                    sumaTotal += numero[fila][columna];
-                    contador++;
                     maximo = numero[fila][columna];
                 } else if (numero[fila][columna] < minimo) {
-                    sumaTotal += numero[fila][columna];
-                    contador++;
                     minimo = numero[fila][columna];
-                  }  
+                }  
+                sumaTotal += numero[fila][columna];
+                contador++;
             }
+
             System.out.print(" | ");
             media = sumaTotal / contador;
             System.out.println(media + " " + minimo + " " + maximo);
