@@ -21,9 +21,10 @@ public class Ejercicio6 {
                 do{
                     num[i][j] = (int)(Math.random()*1001);
                     esRepetido = false;
-                    for (int j2 = 0; j2 < i + j; j2++) {
+                    for (int j2 = 0; j2 < (i * 10) + j; j2++) {
                         if (num[i][j] == num[j2/10][j2%10]){
                             esRepetido = true;
+                            break;
                         }
                     }
                     if (num[i][j] > maximo){
